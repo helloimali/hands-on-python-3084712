@@ -18,3 +18,6 @@ elif current_env in [CODE_SPACE, LOCAL]:
     print("Codespace or local environment")
 else:
     print("Unknown environment")
+
+# export ENV_NAME="local"
+# python main.py

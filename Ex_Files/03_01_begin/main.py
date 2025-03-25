@@ -11,12 +11,15 @@ EINSTEIN = {
     "category": "physics",
     "motivation": "for his services to Theoretical Physics...",
 }
-
+# with, opens the file for this block and closes it after its done
+# 'r' denotes "read mode" so no writting to file
+# 'f' is the opened csv file 
 with open("laureates.csv", "r") as f:
     reader = csv.DictReader(f)
     laureates = list(reader)
 
 for laureate in laureates:
     if laureate["surname"] == "Einstein":
+        # pretty print
         pprint(laureate)
         break
