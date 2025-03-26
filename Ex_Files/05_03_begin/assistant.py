@@ -21,10 +21,10 @@ response = client.chat.completions.create(
             "content": "Who was Alexander Hamilton?",
         }
     ],
-    model=model_name,
-    temperature=1.0,
-    max_tokens=1000,
-    top_p=1.0
+    model=model_name, #
+    temperature=1.0, # experiements with how the model will predict things
+    max_tokens=1000, # 
+    top_p=1.0 #
 )
 
 print(response.choices[0].message.content)

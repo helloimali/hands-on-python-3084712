@@ -6,3 +6,9 @@ response = requests.get(
 
 last_twenty_years = response.json()[1][:20]
 
+for year in last_twenty_years:
+  if not year["value"]:
+    continue
+  display_width = year["value"] // 10_000_000 #floor my a 10 milli
+  print(f"{year['date']}: ", display_width*"=")
+  
